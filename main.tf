@@ -38,7 +38,7 @@ resource "aws_vpc" "vpc_github_action" {
    #creating route to attach internet gateway with route table
     resource "aws_route" "gitaction_route" {
      gateway_id = aws_internet_gateway.gitaction_igw.id
-     subnet_id = aws_subnet.gitaction_subnet.id
+     route_table_id = aws_route_table.gitaction_route.id
      destination_cidr_block = "0.0.0.0/0"
     }
 
