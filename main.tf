@@ -57,21 +57,21 @@ resource "aws_vpc" "vpc_github_action" {
       from_port = 22
       to_port = 22
       protocol = "tcp"
-      cidr_block = ["0.0.0.0/0"]
+      cidr_blocks = ["0.0.0.0/0"]
      }
      ingress {
       description = "allowing ssh port"
       from_port = 80
       to_port = 80
       protocol = "tcp"
-      cidr_block = ["0.0.0.0/0"]
+      cidr_blocks = ["0.0.0.0/0"]
      }
      egress {
       description = "allow all outbound"
       from_port = 0
       to_port = 0
       protocol = "-1"
-      cidr_block = ["0.0.0.0/0"]
+      cidr_blocks = ["0.0.0.0/0"]
      }
  }
 
