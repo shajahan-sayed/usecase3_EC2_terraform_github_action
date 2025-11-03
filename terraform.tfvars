@@ -1,0 +1,6 @@
+instance_type = "t2.micro"
+ami_id = "ami-02b8269d5e85954ef"
+key_name ="auto1"
+vpc_gitaction_cidr = "10.0.0.0/16"
+gitaction_subnet_cidr = "10.0.2.0/24"
+aws_region = "ap-south-1"
