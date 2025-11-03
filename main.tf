@@ -11,7 +11,7 @@ resource "aws_vpc" "vpc_github_action" {
 
  resource "aws_subnet" "gitaction_subnet" {
   vpc_id = onaws_vpc.vpc_github_action
-  cidr_block = var.gitaction_subnet.id
+  cidr_block = var.gitaction_subnet
 
   tags = { 
    Name = "gitaction_subnet"
