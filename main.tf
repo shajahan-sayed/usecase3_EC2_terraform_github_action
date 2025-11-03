@@ -29,7 +29,7 @@ resource "aws_vpc" "vpc_github_action" {
 
    #creating route table 
    resource "aws_route_table" "gitaction_route_table"{
-    vpc.id = aws_vpc.vpc_github_action.id
+    vpc_id = aws_vpc.vpc_github_action.id
 
     tags = {
      Name = "gitaction_route_table"
