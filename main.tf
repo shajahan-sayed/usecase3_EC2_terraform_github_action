@@ -73,6 +73,7 @@ resource "aws_vpc" "vpc_github_action" {
       protocol = "-1"
       cidr_block = ["0.0.0.0/0"]
      }
+ }
 
      
     
