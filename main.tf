@@ -1,4 +1,4 @@
-#creating vpc
+#creating vpc1
 resource "aws_vpc" "vpc_github_action" {
  cidr_block = var.vpc_github_action
 
