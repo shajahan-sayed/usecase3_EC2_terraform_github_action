@@ -10,7 +10,7 @@ resource "aws_vpc" "vpc_github_action" {
  #creating subnet
 
  resource "aws_subnet" "gitaction_subnet" {
-  vpc_id = onaws_vpc.vpc_github_action
+  vpc_id = aws_vpc.vpc_github_action
   cidr_block = var.gitaction_subnet
 
   tags = { 
