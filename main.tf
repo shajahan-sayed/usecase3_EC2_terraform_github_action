@@ -44,7 +44,7 @@ resource "aws_vpc" "vpc_github_action" {
 
     #creating route table association 
     resource "aws_route_table_association" "gitaction_route_association" {
-     route_table_id = aws_route_table.gitaction_route.id
+     route_table_id = aws_route_table.gitaction_route_table.id
      subnet_id = aws_subnet.gitaction_subnet.id
     }
 
