@@ -1,0 +1,36 @@
+name : terraform_cicd1
+on:
+   push:
+    branches: [" main "]
+   pull_request:
+
+jobs:
+  terraform:
+    name: terraform
+    runs-on : ubuntu-latest
+
+    env:
+      AWS_ACCESS_KEY_ID: "AKIAQR5EO6LIS23HHHNV"
+      AWS_SECRET_ACCESS_KEY: "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"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.9.0   # specify version you use
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Validate
+        run: terraform validate
+        
+      - name: Terraform Plan
+        if: github.event_name == 'pull_request'
+        run: terraform plan -input=false
+
+      - name: Terraform Apply
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: terraform apply -auto-approve -input=false
