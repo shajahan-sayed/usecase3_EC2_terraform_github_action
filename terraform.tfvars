@@ -1,6 +1,6 @@
 instance_type = "t2.micro"
 ami_id = "ami-0ecb62995f68bb549"
 key_name ="auto1"
-vpc_gitaction_cidr = "10.0.0.0/16"
-gitaction_subnet_cidr = "10.0.2.0/24"
+vpc_github_action = "10.0.0.0/16"
+gitaction_subnet = "10.0.2.0/24"
 aws_region = "us-east-1"
