@@ -1,7 +1,7 @@
 variable "aws_region" {
   description = "allocation of region to deploy"
   type = string 
-  default = "ap-south-1"
+  default = "us-east-1"
 }
 variable "instance_type" {
   description = "allocation of instance type"
